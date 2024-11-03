@@ -149,6 +149,29 @@ public class CubeSeparate : MonoBehaviour
     }
 }
 
+bir nesneyi başka bir nesnenin içinden geçirne kodu
+
+void Start() {
+    // Collider'ı tetikleyici olarak ayarla
+    GetComponent<Collider>().isTrigger = true;
+}
+
+
+bir leveldan diğer levela geçme kodu
+
+public class LevelManager : MonoBehaviour
+{
+    // Geçiş yapmak istediğiniz sahnenin adı
+    public string nextLevel;
+
+    // Bu fonksiyon, sahne geçişini gerçekleştirecek
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(nextLevel);
+    }
+}
+
+
 
 
 
